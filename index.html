@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>LC共振計算機</title>
+</head>
+<body>
+    <script src="index.js">
+    </script>
+    <h1>LC共振を計算するサイト</h1>
+    <form class="inductor-form">
+        <dl>
+            <dt>インダクタンスL：(mH)</dt>
+            <dd><input type="number" class="box" name="inductance">
+                <select id ="indactance_ip" onchange = "get_inductance_ip();">
+                    <option value="-9">nH</option>
+                    <option value="-6">μH</option>
+                    <option value="-3">mH</option>
+                    <option value="0">H</option>
+                </select>
+            </dd>
+            <dt>周波数：(kHz)</dt>
+            <dd><input type="number" class="box" name="freqency">
+                <select id="freaqency_ip" onchange="get_frequency_ip();">
+                    <option value="9">GHz</option>
+                    <option value="6">MHz</option>
+                    <option value="3">kHz</option>
+                    <option value="0">Hz</option>
+                </select>
+            </dd>
+            <dt>キャパシタC：(F)</dt>
+            <dd><input id="capacitance" class="box" type="text" readonly="">
+                <select id="capacitance_ip" onchange="get_capacitance_ip();">
+                    <option value="-12">pF</option>
+                    <option value="-9">nF</option>
+                    <option value="-6">μF</option>
+                    <option value="-3">mF</option>
+                    <option value="0">F</option>
+                </select>
+            </dd>
+            <p><input type="button" class="calc-btn" onclick="calc(inductance.value,freqency.value);" value="計算"></p>
+    </form>
+</body>
+</html>
