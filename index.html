@@ -11,9 +11,10 @@
     <script src="index.js">
     </script>
     <h1>LC共振を計算するサイト</h1>
+    <div class="container">
     <form class="calc-form">
         <dl>
-            <dt>インダクタンスL：(mH)</dt>
+            <dt>インダクタンスL</dt>
             <dd><input type="number" class="box" name="inductance">
                 <select id ="indactance_ip" onchange = "get_inductance_ip();">
                     <option value="-9">nH</option>
@@ -22,7 +23,7 @@
                     <option value="0">H</option>
                 </select>
             </dd>
-            <dt>周波数：(kHz)</dt>
+            <dt>周波数f</dt>
             <dd><input type="number" class="box" name="freqency">
                 <select id="freaqency_ip" onchange="get_frequency_ip();">
                     <option value="9">GHz</option>
@@ -31,7 +32,7 @@
                     <option value="0">Hz</option>
                 </select>
             </dd>
-            <dt>キャパシタC：(F)</dt>
+            <dt>キャパシタC</dt>
             <dd><input id="capacitance" class="box" type="text" readonly="">
                 <select id="capacitance_ip" onchange="get_capacitance_ip();">
                     <option value="-12">pF</option>
@@ -43,5 +44,6 @@
             </dd>
             <p><input type="button" class="calc-btn" onclick="calc(inductance.value,freqency.value);" value="計算"></p>
     </form>
+    </div>
 </body>
 </html>
